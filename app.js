@@ -1,9 +1,12 @@
-var express = require('express');
-var path = require('path');
-var app = express();
-var http = require('http');
-var server = http.createServer(app);
-var config = require('./config/config')
+'use strict'
+
+const express = require('express');
+const path = require('path');
+const http = require('http');
+
+let app = express();
+let server = http.createServer(app);
+let config = require('./config/config')
 
 server.listen(config.port);
 app.set('views', path.join(__dirname, 'public/views'));
